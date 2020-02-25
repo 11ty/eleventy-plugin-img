@@ -1,0 +1,38 @@
+{
+  "name": "@11ty/eleventy-plugin-img",
+  "version": "1.0.0",
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/11ty"
+  },
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin"
+  ],
+  "author": {
+    "name": "Zach Leatherman",
+    "email": "zachleatherman@gmail.com",
+    "url": "https://zachleat.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/11ty/eleventy-plugin-img/issues"
+  },
+  "homepage": "https://github.com/11ty/eleventy-plugin-img#readme",
+  "peerDependencies": {
+    "@11ty/eleventy": ">=0.10.0"
+  },
+  "devDependencies": {
+    "avatar-local-cache": "^2.0.6",
+    "flat-cache": "^2.0.1",
+    "short-hash": "^1.0.0"
+  }
+}
