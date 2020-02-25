@@ -72,6 +72,7 @@ function imgShortcode(props = {}, options = {}) {
 		imgDirectory: IMG_DIRECTORY,
 		cacheDirectory: CACHE_DIRECTORY,
 		offlineMode: OFFLINE_MODE,
+		imgSrcDirectory: "",
 		pathPrefix: "/",
 		addWidthHeight: true,
 		// image formats
@@ -144,15 +145,23 @@ function imgShortcode(props = {}, options = {}) {
 			});
 		}
 	}).then(function(files) {
+		function getImgSrc(fileObj, options) {
+			if(isFullUrl(fileObj.path)) {
+				return fileObj.path;
+			}
+
+			return path.join( options.pathPrefix, options.imgSrcDirectory, `${fileObj.name}.${fileObj.extension}`);
+		}
+
 		let ret = [];
 		if( files.length >= 2 ) {
-			let srcsetUrl = files[0].path;
+			
 			ret.push(`<picture>`);
-			ret.push(`<source srcset="${ path.join(isFullUrl(srcsetUrl) ? "" : options.pathPrefix, srcsetUrl ) }" type="image/webp">`);
+			ret.push(`<source srcset="${ getImgSrc(files[0], options) }" type="image/webp">`);
 		}
 		if( files.length ) {
 			let img = files[files.length - 1];
-			let imgUrl = img.path;
+			let imgUrl = getImgSrc(img, options);
 
 			if(options.addWidthHeight) {
 				if(img.width && !props.width) {
@@ -165,7 +174,7 @@ function imgShortcode(props = {}, options = {}) {
 			let copiedProps = Object.assign({}, props);
 			delete copiedProps.src;
 
-			ret.push(`<img src="${ path.join(isFullUrl(imgUrl) ? "" : options.pathPrefix, imgUrl) }"${serializeObjectToAttributes(copiedProps)}>`);
+			ret.push(`<img src="${ imgUrl }"${serializeObjectToAttributes(copiedProps)}>`);
 		}
 		if( files.length >= 2 ) {
 			ret.push("</picture>");
