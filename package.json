@@ -1,13 +1,17 @@
 {
   "name": "@11ty/eleventy-plugin-img",
   "version": "1.0.0",
-  "description": "",
+  "description": "A plugin to perform runtime image transformations.",
   "publishConfig": {
     "access": "public"
   },
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11ty/eleventy-plugin-img.git"
   },
   "funding": {
     "type": "opencollective",
