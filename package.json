@@ -1,6 +1,6 @@
 {
   "name": "@11ty/eleventy-plugin-img",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "A plugin to perform runtime image transformations.",
   "publishConfig": {
     "access": "public"
@@ -34,7 +34,7 @@
   "peerDependencies": {
     "@11ty/eleventy": ">=0.10.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "avatar-local-cache": "^2.0.6",
     "flat-cache": "^2.0.1",
     "short-hash": "^1.0.0"
