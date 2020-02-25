@@ -1,6 +1,6 @@
 {
   "name": "@11ty/eleventy-plugin-img",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "A plugin to perform runtime image transformations.",
   "publishConfig": {
     "access": "public"
