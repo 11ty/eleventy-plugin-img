@@ -1,6 +1,8 @@
-# eleventy-plugins-img
+# eleventy-plugin-img
 
-A plugin to perform runtime image transformations.
+⚠️⚠️⚠️ This plugin has been temporarily superceded by the lower level utility [`eleventy-img`](https://github.com/11ty/eleventy-img). Please use that instead!
+
+* https://github.com/11ty/eleventy-img
 
 ## Installation
 
@@ -20,7 +22,3 @@ module.exports = function(eleventyConfig) {
 ```
 
 Read more about [Eleventy plugins.](https://www.11ty.io/docs/plugins/)
-
-## Usage
-
-_Not yet._
